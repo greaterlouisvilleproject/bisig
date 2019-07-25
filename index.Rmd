@@ -10,26 +10,234 @@ h1 {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Museo Sans 300";
 }
+h2 {
+  font-size: 0px;
+}
 body{
   font-family: "Museo Sans 300";
   font-size: 15px;
 }
 </style>
 
-# Cost-Burdened Households
+```{r include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
 
-![](images/cost_burdened_ranking.png){width=80%}
+This document includes graphs for our primary affordable housing metric, cost-burdened households. It also includes graphs for some related housing metrics that might help tell the story.
 
-![](images/cost_burdened_trendline.png){width=80%}
 
-![](images/cost_burdened_sex.png){width=80%}
+A cost-burdened household pays more than 30% of their combined income towards housing costs. Housing costs include mortgage or rent, utilities, property tax, etc.
 
-![](images/cost_burdened_race.png){width=80%}
+My main takeaways from cost-burden:  
 
-![](images/cost_burdened_max_min.png){width=80%}
+* Louisville has a relatively low rate of cost-burdened households.
+* Black households are much more likely to be cost-burdened than White households.
+* In some neighborhoods, around 50% of households are cost-burdened.
+
+My main takeaways from the other metrics:  
+* Louisville has a high rate of homeownership, but a large homeownership gap between Black and White residents.
+* (Working on this data.) Some neighobrhoods are becoming much less affordable pretty quickly.
+
 <br>
 
 ***
 
 <br>
+
+# Cost-Burdened Households
+
+## Ranking
+
+Out of our 17 peer cities, Louisville had the third-lowest rate of burdened housheolds in 2017. Still, over 25% of households live in what we would consider to be unaffordable housing.
+
+```{r}
+knitr::include_graphics("images/cost_burdened_ranking.png")
+```
+
+***
+
+## Trendline
+
+This graph compares Louisville, the average among our peer group, and the 25th and 75th percentiles in our peer group. (One quarter of cities are below the 25th percentile, and one quarter are above the 75th percentile.)
+
+As incomes have rebounded from the Great Recession, more people have been able to meet the affordable housing threshold.
+
+```{r}
+knitr::include_graphics("images/cost_burdened_trendline.png")
+```
+
+***
+
+## Trendline by Race
+
+This graph compares Black-headed households to White-headed households. (The head of household is the person whose name is on the deed/mortgage/lease.) Far more Black residents live in unaffordable housing than white residents.
+
+```{r}
+knitr::include_graphics("images/cost_burdened_race.png")
+```
+
+***
+
+## Peer Change
+
+This graph compares Louisville to the peer that has improved the most and the peer that has performed the worst. It's based on change since 2000, so oftentimes (like in this graph) the most-improved is not the best.
+
+The most-improved peer is Cincinnati, which has essentially returned to where it was in 2000. Indianapolis is the least-improved peer. It looks like it hasn't recovered much since the Recession.
+
+```{r}
+knitr::include_graphics("images/cost_burdened_max_min.png")
+```
+
+***
+
+## Map
+
+This is an interactive map of housing affordability in Louisville. Darker colors show higher rates of unaffordable housing. The small areas are tracts, and the dark lines denote our neighborhood boundaries. Since nobody knows what census tracts are, we usually talk about things at the neighborhood level. You can mouse over the map to see the data.
+
+The neighborhood with the most cost-burdened households is Downtown-Old Louisville-University, followed by California-Parkland and Russell. The neighborhood with the least cost-burdened households is Floyd's Fork.
+
+```{r}
+knitr::include_url("images/cost_burdened_map.html")
+```
+
+<br>
+
+***
+
+<br>
+
+# Homeownership
+
+Homeownership is the percentage of households that are owned by their occupants. 
+
+***
+
+## Ranking
+
+This list is ordered very similarly to cost-burdened households, although Louisville moves down to 5th. 
+
+```{r}
+knitr::include_graphics("images/homeownership_ranking.png")
+```
+
+***
+
+## Trendline
+
+Homeownership is trending down across the US and within our peer group. Louisville has traditionally performed toward the top of the peer group, and homeownership in town has remained roughly the same since 2012.
+
+```{r}
+knitr::include_graphics("images/homeownership_trendline.png")
+```
+
+***
+
+## Trendline by Race
+
+White residents in Louisville have a homeownership rate about twice that of Black Louisville residents.
+
+In many trendlines broken down by race, White Louisville residents and Black Louisville residents perform about the same compared to their own peer groups. (Take cost-burdened households, for example. Both White and Black Louisville residents are at the 25th percentile of their peer group.) For homeownership, however, this is not the case. White Louisville residents have higher-than-average homeownership rates, while Black residents have lower-than-average homeownership rates. This reflects patterns of intense segregation and disinvestment in Louisville.
+
+```{r}
+knitr::include_graphics("images/homeownership_race.png")
+```
+
+***
+
+## Peer Change
+
+Greenville has seen an increase in homeownership since the Recession, while Memphis has continued to steadily decline.
+
+```{r}
+knitr::include_graphics("images/homeownership_max_min.png")
+```
+
+***
+
+## Map
+```{r}
+knitr::include_url("images/homeownership_map.html")
+```
+
+<br>
+
+***
+
+<br>
+
+# Housing Price Index
+
+The housing price index describes how much home prices have changed since 2000. There is a balance to strike here, and our method of color-coding probably obscures that. One one hand, increasing home prices help homeowners build equity and net worth and are an indicator of a healthy home market. Too much increase pushes people out of their own neighborhoods.
+
+## Ranking
+
+Housing in Louisville has gotten more expensive than in the average peer city since 2000, but we're in the middle cluster of 8 peers that are between 142-151.
+
+```{r}
+knitr::include_graphics("images/HPI_ranking.png")
+```
+
+***
+
+## Trendline
+
+We're right at the peer average, though that is definitely pulled way up by Nashville.
+
+```{r}
+knitr::include_graphics("images/HPI_trendline.png")
+```
+
+***
+
+## Peer Change
+
+Nashville is going to have some problems.
+
+```{r}
+knitr::include_graphics("images/HPI_max_min.png")
+```
+
+<br>
+
+***
+
+<br>
+
+# Severe Housing Problems
+
+A household is considered to have "severe housing problems" if they do not have complete plumbing facilities, do not have complete kitchen facilities, are overcrowded (more people than rooms), or pay more than 50% of their income toward housing costs.
+
+***
+
+## Ranking
+
+Louisville ranks further down this list than the previous two. (I'll do some digging here.)
+
+```{r}
+knitr::include_graphics("images/severe_housing_problems_ranking.png")
+```
+
+***
+
+## Trendline
+```{r}
+knitr::include_graphics("images/severe_housing_problems_trendline.png")
+```
+
+***
+
+## Trendline by Race
+
+```{r}
+knitr::include_graphics("images/severe_housing_problems_race.png")
+```
+
+***
+
+## Peer Change
+```{r}
+knitr::include_graphics("images/severe_housing_problems_max_min.png")
+```
+
+
 
