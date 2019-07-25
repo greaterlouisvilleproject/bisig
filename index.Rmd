@@ -35,6 +35,7 @@ My main takeaways from cost-burden:
 * In some neighborhoods, around 50% of households are cost-burdened.
 
 My main takeaways from the other metrics:  
+
 * Louisville has a high rate of homeownership, but a large homeownership gap between Black and White residents.
 * (Working on this data.) Some neighobrhoods are becoming much less affordable pretty quickly.
 
