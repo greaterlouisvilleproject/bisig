@@ -1,0 +1,35 @@
+---
+title: "Affordable Housing"
+output: html_document
+---
+
+<style type="text/css">
+h1 {
+  text-align: center;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Museo Sans 300";
+}
+body{
+  font-family: "Museo Sans 300";
+  font-size: 15px;
+}
+</style>
+
+# Cost-Burdened Households
+
+![](images/cost_burdened_ranking.png){width=80%}
+
+![](images/cost_burdened_trendline.png){width=80%}
+
+![](images/cost_burdened_sex.png){width=80%}
+
+![](images/cost_burdened_race.png){width=80%}
+
+![](images/cost_burdened_max_min.png){width=80%}
+<br>
+
+***
+
+<br>
+
